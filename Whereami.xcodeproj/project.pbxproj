@@ -21,6 +21,7 @@
 		63510AC9181AC7CC00885C32 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63510AAB181AC7CB00885C32 /* UIKit.framework */; };
 		63510AD1181AC7CC00885C32 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63510ACF181AC7CC00885C32 /* InfoPlist.strings */; };
 		63510AD3181AC7CC00885C32 /* WhereamiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63510AD2181AC7CC00885C32 /* WhereamiTests.m */; };
+		63510ADD181AD08100885C32 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63510ADC181AD08100885C32 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		63510ACE181AC7CC00885C32 /* WhereamiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WhereamiTests-Info.plist"; sourceTree = "<group>"; };
 		63510AD0181AC7CC00885C32 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		63510AD2181AC7CC00885C32 /* WhereamiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhereamiTests.m; sourceTree = "<group>"; };
+		63510ADC181AD08100885C32 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63510ADD181AD08100885C32 /* CoreLocation.framework in Frameworks */,
 				63510AAA181AC7CB00885C32 /* CoreGraphics.framework in Frameworks */,
 				63510AAC181AC7CB00885C32 /* UIKit.framework in Frameworks */,
 				63510AA8181AC7CB00885C32 /* Foundation.framework in Frameworks */,
@@ -101,6 +104,7 @@
 		63510AA6181AC7CB00885C32 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				63510ADC181AD08100885C32 /* CoreLocation.framework */,
 				63510AA7181AC7CB00885C32 /* Foundation.framework */,
 				63510AA9181AC7CB00885C32 /* CoreGraphics.framework */,
 				63510AAB181AC7CB00885C32 /* UIKit.framework */,
@@ -112,8 +116,6 @@
 		63510AAD181AC7CB00885C32 /* Whereami */ = {
 			isa = PBXGroup;
 			children = (
-				63510AB6181AC7CB00885C32 /* WhereamiAppDelegate.h */,
-				63510AB7181AC7CB00885C32 /* WhereamiAppDelegate.m */,
 				63510AB9181AC7CB00885C32 /* Main.storyboard */,
 				63510ABC181AC7CB00885C32 /* WhereamiViewController.h */,
 				63510ABD181AC7CB00885C32 /* WhereamiViewController.m */,
@@ -126,6 +128,8 @@
 		63510AAE181AC7CB00885C32 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				63510AB6181AC7CB00885C32 /* WhereamiAppDelegate.h */,
+				63510AB7181AC7CB00885C32 /* WhereamiAppDelegate.m */,
 				63510AAF181AC7CB00885C32 /* Whereami-Info.plist */,
 				63510AB0181AC7CB00885C32 /* InfoPlist.strings */,
 				63510AB3181AC7CB00885C32 /* main.m */,
