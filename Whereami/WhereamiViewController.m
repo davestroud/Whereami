@@ -19,10 +19,13 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
     if (self) {
+        // create location manager object
         locationManager = [[CLLocationManager alloc]init];
+        // want to be accurate as possible regardless of power usage
+        [locationManager setDelegate:self];
         
         [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-        
+        // tells manager to search for location immediately
         [locationManager startUpdatingLocation];
     }
     return self;
