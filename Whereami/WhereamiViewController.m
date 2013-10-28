@@ -43,4 +43,9 @@
                NSLog(@"Could not find location %@", error);
            }
 
+- (void)dealloc
+{
+    [locationManager setDelegate:nil];
+}
+
 @end
