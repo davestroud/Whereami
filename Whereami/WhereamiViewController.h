@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>   
 
-@interface WhereamiViewController : UIViewController
+@interface WhereamiViewController : UIViewController <CLLocationManagerDelegate>
 {   //added instance variable to hold a pointer to an instance of CLLocationManager
     CLLocationManager *locationManager;
 }
