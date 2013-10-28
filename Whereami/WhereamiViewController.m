@@ -2,50 +2,48 @@
 //  WhereamiViewController.m
 //  Whereami
 //
-//  Created by DAVID STROUD on 10/25/13.
-//  Copyright (c) 2013 Grey Matter. All rights reserved.
+//  Created by joeconway on 7/31/11.
+//  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
 #import "WhereamiViewController.h"
-
-@interface WhereamiViewController ()
-
-@end
 
 @implementation WhereamiViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    
-    if (self) {
-        // create location manager object
-        locationManager = [[CLLocationManager alloc]init];
+    if(self) {
+        // Create location manager object
+        locationManager = [[CLLocationManager alloc] init];
         
+        // There will be a warning from this line of code; ignore it for now
         [locationManager setDelegate:self];
-        // want to be accurate as possible regardless of power usage
+        
+        // And we want it to be as accurate as possible
+        // regardless of how much time/power it takes
         [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-        // tells manager to search for location immediately
+        // Tell our manager to start looking for its location immediately
         [locationManager startUpdatingLocation];
     }
     return self;
 }
-    - (void)locationManager:(CLLocationManager *)manager
-        didUpdateToLocation:(CLLocation *)newLocation
-            fromLocation:(CLLocation *)oldLocation
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation
 {
     NSLog(@"%@", newLocation);
 }
-    
-        -(void)locationManager:(CLLocationManager *)manager
-                didFailWithError:(NSError *)error;
-           {
-               NSLog(@"Could not find location %@", error);
-           }
+
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error
+{
+    NSLog(@"Could not find location: %@", error);
+}
 
 - (void)dealloc
 {
+    // Tell the location manager to stop sending us messages
     [locationManager setDelegate:nil];
 }
-
 @end

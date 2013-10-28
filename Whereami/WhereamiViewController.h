@@ -2,15 +2,16 @@
 //  WhereamiViewController.h
 //  Whereami
 //
-//  Created by DAVID STROUD on 10/25/13.
-//  Copyright (c) 2013 Grey Matter. All rights reserved.
+//  Created by joeconway on 7/31/11.
+//  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>   
+#import <CoreLocation/CoreLocation.h>
 
-@interface WhereamiViewController : UIViewController <CLLocationManagerDelegate>
-{   //added instance variable to hold a pointer to an instance of CLLocationManager
+@interface WhereamiViewController : UIViewController
+<CLLocationManagerDelegate>
+{
     CLLocationManager *locationManager;
 }
 
